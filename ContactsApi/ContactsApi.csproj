@@ -12,7 +12,6 @@
     <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
-    <PackageReference Include="Xestor.Resharper.Extention" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

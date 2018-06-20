@@ -21,8 +21,6 @@ namespace ContactsApi.Controllers
             _contactRepository = cityInfoRepository;
         }
 
-
-
         //Retrieve​ ​a​ ​contact​ ​record 
         [HttpGet("{id}", Name = "GetContact")]
         public IActionResult GetContacts(int id)

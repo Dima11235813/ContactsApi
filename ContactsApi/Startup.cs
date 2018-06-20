@@ -26,8 +26,8 @@ namespace ContactsApi
         {
             services.AddMvc();
 
-            //var connectionString = Startup.Configuration["connectionStrings:cityInfoDBConnectionString"];
-            var connectionString = @"Server=(localdb)\mssqllocaldb;Database=ContactDb; Trusted_Connection=True;";//default string
+            var connectionString = Startup.Configuration["connectionStrings:ContactDbConnectionString"];
+            
             services.AddDbContext<ContactContext>(o => o.UseSqlServer(connectionString));
             services.AddScoped<IContactRepository, ContactRepository>();
         }

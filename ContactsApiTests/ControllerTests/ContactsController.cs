@@ -13,19 +13,19 @@ namespace ContactsApiTests
         {
             _contactRepository = cityInfoRepository;
         }
-        [TestMethod]
-        public void GetOneContactById()
-        {
-            // Arrange
-            ContactsController contactsController = new ContactsController();
-            controller.ControllerContext = TradeviewAnalytics.Tests.TestUtilities.GenerateControllerContext(Convert.ToInt32(ConfigurationManager.AppSettings["test_WebUser_ID"]));
+        //[TestMethod]
+        //public void GetOneContactById()
+        //{
+        //    // Arrange
+        //    ContactsController contactsController = new ContactsController();
+        //    controller.ControllerContext = TradeviewAnalytics.Tests.TestUtilities.GenerateControllerContext(Convert.ToInt32(ConfigurationManager.AppSettings["test_WebUser_ID"]));
 
-            // Act 
-            ViewResult result = controller.Index() as ViewResult;
+        //    // Act 
+        //    ViewResult result = controller.Index() as ViewResult;
 
-            // Assert
-            Assert.IsNotNull(result);
+        //    // Assert
+        //    Assert.IsNotNull(result);
 
-        }
+        //}
     }
 }
