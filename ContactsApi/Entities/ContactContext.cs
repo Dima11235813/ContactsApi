@@ -9,8 +9,8 @@ namespace CityInfo.API.Entities
     {
         public ContactContext(DbContextOptions<ContactContext> options): base(options)
         {
-            //Database.EnsureCreated();//use this for code first db creation
-            Database.Migrate();//this will seed the database and create it if doesn't exist
+            Database.EnsureCreated();//use this for code first db creation
+            //Database.Migrate();//this will seed the database and create it if doesn't exist
         }
 
         public DbSet<Contact> Contacts { get; set; }

@@ -36,7 +36,13 @@ namespace ContactsApi.Services
         public Contact GetContact(int contactId)
         {
             return _context.Contacts.Where(c => c.Id == contactId).FirstOrDefault();
+
         }
+        public List<Contact> GetAllContacts()
+        {
+            return _context.Contacts.ToList();
+        }
+        
 
         public Contact GetContactsByEmailOrPhoneNumber(string emailOrPhoneNumber, string query)
         {

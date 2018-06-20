@@ -16,6 +16,8 @@ namespace ContactsApi.Services
         Contact GetContactsByEmailOrPhoneNumber(string emailOrPhone, string query);
         //Get single contact
         Contact GetContact(int contactId);
+        //Get all contacts
+        List<Contact> GetAllContacts();
         //create 1 contact
         void AddContact(Contact contact);
         //remove l contact

@@ -33,6 +33,18 @@ namespace ContactsApi.Controllers
             }
             return Ok(contactToReturn);
         }
+        //Retrieve​ ​a​ ​contact​ ​record 
+        [HttpGet]
+        public IActionResult GetAllContacts()
+        {
+            // find city
+            var allContacts = _contactRepository.GetAllContacts();
+            if (allContacts == null)
+            {
+                return NotFound();
+            }
+            return Ok(allContacts);
+        }
 
         //Create​ ​a​ ​contact​ ​record 
         [HttpPost()]

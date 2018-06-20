@@ -41,7 +41,7 @@ namespace ContactsApi
             }
             else
             {
-                app.UseExceptionHandler();
+                app.UseExceptionHandler("/Error");
             }
             contactContext.EnsureSeedDataForContext();
 
