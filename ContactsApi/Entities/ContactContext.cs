@@ -9,14 +9,20 @@ namespace CityInfo.API.Entities
     {
         public ContactContext(DbContextOptions<ContactContext> options): base(options)
         {
-            var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            //use this for code first db creation
-            if (env == "production")
-            {
-                Database.EnsureCreated();
-            }
+            //var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            ////use this for code first db creation
+            //if (env == "production")
+            //{
+            //    Database.EnsureCreated();
+            //}
+            //if (env == "development")
+            //{
+            //   //this will seed the database and create it if doesn't exist
+            //}
+            Database.EnsureCreated();
+            Database.Migrate();
 
-            //Database.Migrate();//this will seed the database and create it if doesn't exist
+
         }
 
         public DbSet<Contact> Contacts { get; set; }
